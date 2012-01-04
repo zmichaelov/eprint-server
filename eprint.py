@@ -54,10 +54,11 @@ class UploadHandler(tornado.web.RequestHandler):
             double = 'sides=one-sided'
         else:
             double = 'sides=two-sided-long-edge'
-        print_options.extend(['-o',double])
+        
+        pages = args['pages']
+        print_options.extend(['-o',double + ' page-ranges='+pages[0]])
     
-#         pages = args['pages']
-#         print_options.append('page-ranges='+pages[0])
+        #print_options.append(' page-ranges='+pages[0])
         
         filepath = args['filepath']
         i = filepath.rfind('/')
