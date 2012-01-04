@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Tornado ePrint Server</title>
+    <link rel="stylesheet" href="{{ static_url("bootstrap.min.css") }}" type="text/css"/>
+    <link rel="stylesheet" href="{{ static_url("style.css") }}" type="text/css"/>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="content">		  
+            <div class="page-header">
+                <h2>Tornado ePrint Server</h2>
+            </div>
+            <div class="row">
+                <form enctype="multipart/form-data" action="/upload" method="post">
+                    <div class="clearfix" id="file">
+                        <label for="file">File</label>
+                        <div class="input">
+                            <input type="file" name="print-upload" />
+                        </div>
+                    </div>
+                    <div class="clearfix" id="net-id">
+                        <label for="net-id">NetID</label>
+                        <div class="input">
+                            <input type="text" name="net-id"/>
+                        </div>
+                    </div>                    
+                    <div class="clearfix" id="double-sided">
+                        <label for="double-sided">Double-Sided</label>
+                        <div class="input">
+                            <input type="checkbox" name="double-sided"/>
+                        </div>
+                    </div>
+                    <div class="clearfix" id="copies">
+                        <label for="copies">Copies</label>
+                        <div class="input">
+                            <input type="text" name="copies"/>
+                        </div>
+                    </div>
+                    <div class="clearfix" id="pages">
+                        <label for="pages">Pages</label>
+                        <div class="input">
+                            <input type="text" name="pages" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="span4 offset4">
+                            <input type="submit" class="btn primary" value="Upload" />
+                            <button id="reset" class="btn" type="reset">Reset</button>
+                        </div>
+                    </div>                    
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
