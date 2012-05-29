@@ -19,8 +19,8 @@ class Application(tornado.web.Application):
         
 class IndexHandler(tornado.web.RequestHandler):
     def get(self):
-        self.render("upload_form.html")
-        
+#        self.render("upload_form.html")
+        self.render("index.html")
 class UploadHandler(tornado.web.RequestHandler):
     @tornado.web.asynchronous
     def post(self):
